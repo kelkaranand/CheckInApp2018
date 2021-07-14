@@ -11,7 +11,7 @@ import Foundation
 public class RestHelper {
     
     static var schoolName = ""
-    static let host = "https://dev1-ljff.cs65.force.com/test/services/apexrest"
+    static let host = "https://ljff.secure.force.com/services/apexrest"
     static let urls = [
         "Register_Device":host+"/device/register",
         "Get_Registration_Key":host+"/device",

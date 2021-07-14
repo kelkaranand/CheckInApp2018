@@ -43,8 +43,10 @@ public class CoreDataHelper {
             return
         }
         let managedContext = appDelegate.persistentContainer.viewContext
-        let descrEntity = NSEntityDescription.entity(forEntityName: entityName, in: managedContext)!
-        let obj = NSManagedObject(entity: descrEntity, insertInto: managedContext)
+        let privateMOC = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        privateMOC.parent = managedContext
+        let descrEntity = NSEntityDescription.entity(forEntityName: entityName, in: privateMOC)!
+        let obj = NSManagedObject(entity: descrEntity, insertInto: privateMOC)
         obj.setValue(jsonObj["FirstName"], forKey: "fname")
         obj.setValue(jsonObj["School_Name"], forKey: "sname")
         obj.setValue(jsonObj["APS_Student_ID"], forKey: "id")
@@ -52,7 +54,12 @@ public class CoreDataHelper {
         obj.setValue(false, forKey: "checked")
         
         do {
-            try managedContext.save()
+            try privateMOC.save()
+            do {
+                try managedContext.save()
+            } catch let _ as NSError {
+                print("Error synchronizinga")
+            }
             
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
