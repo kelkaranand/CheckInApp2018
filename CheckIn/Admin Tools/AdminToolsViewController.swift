@@ -152,6 +152,21 @@ class AdminToolsViewController: UIViewController {
             return
         }
         
+        //Check if all students should be pulled, or only those with commitment letters
+        let commitment_letter_req_alert = UIAlertController(title: "Commitment Letters", message: "Do you want to download students who have turned in their commitment letters, or do you want to download all students?", preferredStyle: .alert)
+        commitment_letter_req_alert.addAction(UIAlertAction(title: "Commitment Letters", style: .default, handler: {
+            action in
+            self.downloadDataAfterFlag(commitment_letter_req_flag: true)
+        }))
+        commitment_letter_req_alert.addAction(UIAlertAction(title: "All Students", style: .default, handler: {
+            action in
+            self.downloadDataAfterFlag(commitment_letter_req_flag: false)
+        }))
+        self.present(commitment_letter_req_alert, animated: true)
+        
+    }
+    
+    func downloadDataAfterFlag(commitment_letter_req_flag:Bool) {
         let downloadDataAlert = UIAlertController(title: "Warning", message: "Downloading data will also clear all the check-in data on this device. Are you sure you want to continue?", preferredStyle: .alert)
         downloadDataAlert.addAction(UIAlertAction(title: "No", style: .cancel))
         downloadDataAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {
@@ -164,8 +179,12 @@ class AdminToolsViewController: UIViewController {
             
             
             DispatchQueue.global(qos: .background).async {
-                
-                let url = URL(string:RestHelper.urls["Get_Students"]!)!
+                var url : URL
+                if commitment_letter_req_flag == false {
+                    url = URL(string:RestHelper.urls["Get_Students"]!)!
+                } else {
+                    url = URL(string:RestHelper.urls["Get_Students_Commitment"]!)!
+                }
                 let schoolURL = URL(string:RestHelper.urls["Get_Schools"]!)!
                 let jsonString = RestHelper.makePost(url, ["identifier": self.identifier!, "key": self.key!])
                 let schoolList = RestHelper.makePost(schoolURL, ["identifier": self.identifier!, "key": self.key!])
@@ -190,6 +209,9 @@ class AdminToolsViewController: UIViewController {
                         
                         for item in jsonArray {
                             let studentDataItem = StudentData(id: item["APS_Student_ID"], fname: item["FirstName"], lname: item["LastName"], checked: false , sname: item["School_Name"])
+                            if studentDataItem.fname == "" || studentDataItem.lname == "" || studentDataItem.sname == "" || studentDataItem.id == "" {
+                                print("Error")
+                            }
                             StudentListViewController.data.append(studentDataItem)
                             StudentListViewController.idmap.updateValue(StudentListViewController.data.count-1, forKey: studentDataItem.id!)
                             CoreDataHelper.saveStudentData(item, "Student")
@@ -212,10 +234,8 @@ class AdminToolsViewController: UIViewController {
             return
         }))
         self.present(downloadDataAlert,animated: true)
-        
-        
-        
     }
+    
     
     @objc func clearCheckins() {
         

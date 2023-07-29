@@ -11,13 +11,15 @@ import Foundation
 public class RestHelper {
     
     static var schoolName = ""
-    static let host = "https://ljff.secure.force.com/services/apexrest"
+//    static let host = "https://ljff.secure.force.com/services/apexrest"
+    static let host = "https://ljff-sup--dev2.sandbox.my.salesforce-sites.com/test/services/apexrest"
     static let urls = [
         "Register_Device":host+"/device/register",
         "Get_Registration_Key":host+"/device",
         "Get_Events":host+"/event",
         "Get_Schools":host+"/schools",
         "Get_Students":host+"/students",
+        "Get_Students_Commitment":host+"/students/wafr",
         "Attendance":host+"/event/attendance",
         "Create_Event":host+"/createEvent",
         "Get_Students_By_School":host+"/schools/" + schoolName] as Dictionary<String,String>
@@ -46,7 +48,7 @@ public class RestHelper {
 //            print("Made Request, status code \(String(describing: response?.getStatusCode()))")
 //            print(url)
 //            print(String(data: request.httpBody!, encoding: String.Encoding.utf8)!)
-            print(String(data: data!, encoding: String.Encoding.utf8)!)
+//            print(String(data: data!, encoding: String.Encoding.utf8)!)
 //            print(error)
             return String(data: data!, encoding: String.Encoding.utf8)!
         }

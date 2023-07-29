@@ -90,7 +90,10 @@ class LaunchViewController :UIViewController
                 else {
                     self.writeKey(key: responseKey)
                     print("Wrote key "+responseKey)
-                    self.performSegue(withIdentifier: "ShowList", sender: self)
+//                    self.performSegue(withIdentifier: "ShowList", sender: self)
+                    let storyboard: UIStoryboard = UIStoryboard(name: "StudentList", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "StudentList") as! StudentListViewController
+                    self.show(vc, sender: self)
                 }
             }
             else {
@@ -114,7 +117,10 @@ class LaunchViewController :UIViewController
                     FilterStudentsViewController.schoolData.append((data as AnyObject).value(forKey: "sname") as! String)
                 }
         
-                self.performSegue(withIdentifier: "ShowList", sender: self)
+//                self.performSegue(withIdentifier: "ShowList", sender: self)
+                let storyboard: UIStoryboard = UIStoryboard(name: "StudentList", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "StudentList") as! StudentListViewController
+                self.show(vc, sender: self)
             }
         })
 

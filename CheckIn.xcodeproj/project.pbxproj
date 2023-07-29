@@ -113,7 +113,6 @@
 		AAE432EF220DE4F5005070AF /* DataShare.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataShare.storyboard; sourceTree = "<group>"; };
 		AAE432F0220DE4F5005070AF /* DataShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataShareViewController.swift; sourceTree = "<group>"; };
 		D60A36999C590C2DCAA3C697 /* Pods-CheckIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckIn.release.xcconfig"; path = "Target Support Files/Pods-CheckIn/Pods-CheckIn.release.xcconfig"; sourceTree = "<group>"; };
-		FB1C5DCC21DD3A1600992842 /* LoadStudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadStudentsViewController.swift; sourceTree = "<group>"; };
 		FB1C5DCE21DE984900992842 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		FB1C5DD021DE9A4C00992842 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		FB1C5DD221DFC6A300992842 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -227,7 +226,6 @@
 				AAE432EB220DE4F5005070AF /* DataRead */,
 				AAE432EE220DE4F5005070AF /* DataShare */,
 				FB6266FC21E3D491009CB9CA /* Filter Students */,
-				FB1C5DC921DD39E400992842 /* Load Students */,
 				FB85E10821C18C59004C7871 /* Create Event */,
 				FB85E10321C15A79004C7871 /* Event Details */,
 				FB85E0FE21C056E3004C7871 /* Admin Tools */,
@@ -548,7 +546,6 @@
 				AADCDA2A228C8CC900BB43F1 /* HelpEndViewController.swift in Sources */,
 				FB1C5DD321DFC6A300992842 /* UIColor.swift in Sources */,
 				14E9945721B58D9E005105A4 /* AppDelegate.swift in Sources */,
-				FB1C5DCD21DD3A1600992842 /* LoadStudentsViewController.swift in Sources */,
 				AAE432F4220DE4F6005070AF /* DataShareViewController.swift in Sources */,
 				149B8E9A21B78D970009ACC3 /* GifViewController.swift in Sources */,
 				FB85E10021C0571C004C7871 /* AdminToolsViewController.swift in Sources */,
@@ -708,14 +705,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C7HGN23NTW;
+				DEVELOPMENT_TEAM = V9MNS6CX39;
 				INFOPLIST_FILE = CheckIn/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AnandKelkar.CheckIn;
+				PRODUCT_BUNDLE_IDENTIFIER = AnandKelkar.CheckIn2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -728,14 +725,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C7HGN23NTW;
+				DEVELOPMENT_TEAM = V9MNS6CX39;
 				INFOPLIST_FILE = CheckIn/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AnandKelkar.CheckIn;
+				PRODUCT_BUNDLE_IDENTIFIER = AnandKelkar.CheckIn2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

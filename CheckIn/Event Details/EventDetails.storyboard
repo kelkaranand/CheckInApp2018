@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CO3-Aa-z50">
-    <device id="ipad10_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CO3-Aa-z50">
+    <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -184,38 +182,38 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="checkedInStudentCell" id="XKa-sF-lKR" customClass="CheckedInTableViewCell" customModule="CheckIn" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="636" height="44"/>
+                                                <rect key="frame" x="0.0" y="44.5" width="636" height="31"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XKa-sF-lKR" id="l7Z-cp-1nD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="636" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="636" height="31"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bG6-r3-38d">
-                                                            <rect key="frame" x="0.0" y="0.0" width="13.5" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="13.5" height="31"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iau-vT-Xib">
-                                                            <rect key="frame" x="13.5" y="4" width="224" height="35.5"/>
+                                                            <rect key="frame" x="13.5" y="2.5" width="224" height="26"/>
                                                             <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYO-V2-4er">
-                                                            <rect key="frame" x="237.5" y="0.0" width="32.5" height="43.5"/>
+                                                            <rect key="frame" x="237.5" y="0.0" width="32.5" height="31"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zI8-lK-iCT">
-                                                            <rect key="frame" x="270" y="4" width="255.5" height="35.5"/>
+                                                            <rect key="frame" x="270" y="2.5" width="255.5" height="26"/>
                                                             <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jek-iA-RXh">
-                                                            <rect key="frame" x="525.5" y="0.0" width="33" height="43.5"/>
+                                                            <rect key="frame" x="525.5" y="0.0" width="33" height="31"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eud-fT-qg2">
-                                                            <rect key="frame" x="558.5" y="4" width="64.5" height="35.5"/>
+                                                            <rect key="frame" x="558.5" y="2.5" width="64.5" height="26"/>
                                                             <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -290,6 +288,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ccy-gF-kGq"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TMf-UF-ZbM" firstAttribute="width" secondItem="TF7-RG-cYj" secondAttribute="width" multiplier="0.8" constant="1" id="7bW-0V-wN8"/>
@@ -301,7 +300,6 @@
                             <constraint firstItem="XNM-lS-OaY" firstAttribute="centerY" secondItem="Ccy-gF-kGq" secondAttribute="centerY" id="gc5-1c-Sk5"/>
                             <constraint firstItem="XNM-lS-OaY" firstAttribute="width" secondItem="TF7-RG-cYj" secondAttribute="width" id="mOt-dF-BAx"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ccy-gF-kGq"/>
                     </view>
                     <navigationItem key="navigationItem" id="tpq-ML-C81"/>
                     <connections>
