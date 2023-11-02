@@ -28,6 +28,8 @@ struct StudentData {
         self.lname = lname
         self.checked = checked
         self.sname = sname
-        self.name = self.fname!+" "+self.lname!
+        if (self.fname != nil && self.lname != nil){
+            self.name = self.fname!+" "+self.lname!
+        }
     }
 }
