@@ -31,5 +31,6 @@ struct StudentData {
         if (self.fname != nil && self.lname != nil){
             self.name = self.fname!+" "+self.lname!
         }
+        //Anand was here
     }
 }
